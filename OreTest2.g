@@ -20,8 +20,8 @@
 ##
 OreTest2 := function(G)
     local g, x, repr, order, index_cent, new_repr;
-    if IsPermGroup(G) = false then G := Image(IsomorphismPermGroup(G)); fi; # we want permutations groups
     order := Order(G);
+    if IsPermGroup(G) = false then G := Image(IsomorphismPermGroup(G)); fi; # we want permutations groups
     repr := [()]; # to store the different representative of the classes
     index_cent := 1; # cummulative sum of the index of the centralizers
     while order <> index_cent do
@@ -29,12 +29,16 @@ OreTest2 := function(G)
         g := Comm(Random(G),Random(G));
         if g <> () then
             for x in repr do
-            if IsConjugate(G, x, g) then
-                new_repr := false;
-                break;
+            # first cheap conjugation test
+            if CycleStructurePerm(x) = CycleStructurePerm(g) then
+                if IsConjugate(G, x, g) then
+                    new_repr := false;
+                    break;
+                fi;
             fi;
             od;
             if new_repr then
+                Print(Length(repr),"\n");
                 Append(repr,[g]);
                 index_cent := index_cent + order/Size(Centralizer(G, g));
             fi;
