@@ -38,7 +38,6 @@ OreTest2 := function(G)
             fi;
             od;
             if new_repr then
-                Print(Length(repr),"\n");
                 Append(repr,[g]);
                 index_cent := index_cent + order/Size(Centralizer(G, g));
             fi;
