@@ -10,7 +10,7 @@
 ################################################################################################################
 ##
 ##  OreTest2( G )
-##          the program halts if and only if evert element of G is a commutator
+##          the program halts if and only if every element of G is a commutator
 ##  
 ##  input:
 ##      G   : ordinary character table of the group G as a matrix with values with values in a cyclotomic field
@@ -38,6 +38,7 @@ OreTest2 := function(G)
             fi;
             od;
             if new_repr then
+                Print(Length(repr),"\n");
                 Append(repr,[g]);
                 index_cent := index_cent + order/Size(Centralizer(G, g));
             fi;

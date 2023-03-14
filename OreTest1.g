@@ -12,7 +12,7 @@
 ##  OreTest1( CT )
 ##  
 ##  input:
-##      CT  : ordinary character table of the group G as a matrix with values with values in a cyclotomic field
+##      CT  : ordinary character table of the group G as a matrix with values in a cyclotomic field
 ##          https://docs.gap-system.org/doc/ref/chap18.html
 ##
 ##  output:
