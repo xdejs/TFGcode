@@ -13,7 +13,7 @@
 ##          the program halts if and only if every element of G is a commutator
 ##  
 ##  input:
-##      G   : ordinary character table of the group G as a matrix with values with values in a cyclotomic field
+##      G   : finite group G
 ##
 ##  output:
 ##      returns true if all the elements of G are commutators
