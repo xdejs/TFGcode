@@ -1,7 +1,7 @@
-################################################################################################################
+################################################################################
 ##
-##  This file contains an implementation of an algorithm that writes any even permutation as a commutator of 
-##  two even permutations.
+##  This file contains an implementation of an algorithm that writes any even 
+##  permutation as a commutator of two even permutations.
 ##
 ##  Created by Xabier de Juan Soriano on 2022
 ##  This file is part of the author's final degree dissertation.
@@ -12,18 +12,18 @@ DeclareGlobalFunction("CommutatorEvenPair");
 DeclareGlobalFunction("CommutatorOddCycle");
 DeclareGlobalFunction("AsCommutatorLists");
 
-################################################################################################################
+################################################################################
 ##
 ##  AsCommutator( permutation )
 ##  
 ##  input: 
-##      permutation : an even permutation, $r \in A_n$ (the value of n is assumed to be the smallest such that
-##                      r \in A_n)
-##      If the permutation is not even an error message is returned
+##      permutation: an even permutation, $r \in A_n$ (the value of n is assumed 
+##                      to be the smallest such thatr \in A_n)
+##      If the permutation is not even an error message is raised.
 ##
 ##  output: 
-##      <list>[1] : even permutation $\phi \in A_n$
-##      <list>[2] : even permutation $\psi \in A_n$
+##      <list>[1]: even permutation $\phi \in A_n$
+##      <list>[2]: even permutation $\psi \in A_n$
 ##      r = [\phi,\psi]
 ##
 AsCommutator := function(permutation)
@@ -192,7 +192,7 @@ InstallGlobalFunction(AsCommutatorLists, function(cycles, cycles2, cycles3)
     return [phi, psi];
 end);
 
-################################################################################################################
+################################################################################
 ##
 ##  CommutatorOddCycle( cycle )
 ##
@@ -216,12 +216,12 @@ InstallGlobalFunction(CommutatorOddCycle, function(cycle)
     return [phi, CycleFromList(l2)];
 end);
 
-################################################################################################################
+################################################################################
 ##
 ##  CommutatorEvenPair( t1, t2 )
 ##
-##  t1 and t2 are lists
-##  Writes a product of two cycles of even length as a product of two cycles of odd length 
+##  t1 and t2 are lists. It writes a product of two cycles of even length as a 
+##  product of two cycles of odd length 
 ##
 InstallGlobalFunction(CommutatorEvenPair, function(t1, t2)
     # t1 and t2 are lists

@@ -1,19 +1,19 @@
-################################################################################################################
+################################################################################
 ##
-##  This file contains an implementation of an algorithm that checks whether in a group all elements 
-##  are commutators
+##  This file contains an implementation of an algorithm that checks whether 
+##  in a group all elements are commutators
 ##
 ##  Created by Xabier de Juan Soriano on 2023
 ##  This file is part of the author's final degree dissertation.
 ##
 
-################################################################################################################
+################################################################################
 ##
 ##  OreTest1( CT )
 ##  
 ##  input:
-##      CT  : ordinary character table of the group G as a matrix with values in a cyclotomic field
-##          https://docs.gap-system.org/doc/ref/chap18.html
+##      CT: ordinary character table of the group G as a matrix with values
+##          in a cyclotomic field https://docs.gap-system.org/doc/ref/chap18.html
 ##
 ##  output:
 ##      returns true if all the elements of G are commutators and false otherwise
