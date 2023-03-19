@@ -14,7 +14,10 @@ DeclareGlobalFunction("AsCommutatorLists");
 
 ################################################################################
 ##
-##  AsCommutator( permutation )
+#M  AsCommutator( permutation )
+##
+##  This is the function that the user must call in order to write any even
+##  permutation as a commutator of two even permutations.
 ##  
 ##  input: 
 ##      permutation: an even permutation, $r \in A_n$ (the value of n is assumed 
@@ -33,10 +36,23 @@ AsCommutator := function(permutation)
     return AsCommutatorLists(list[1],list[2],list[3]);
 end;
 
+################################################################################
+##
+##  AsCommutatorLists( cycles, cycles2, cycles3 )
+##
+##  This is function is not supposed to be used by the user
+##  
+##  input: 
+##      cycles  : a list containing cycles of odd order
+##      cycles2 : a list containing pairs of cycles of even order
+##      cycles3 : a list containing 3-cycles
+##          The cycle (a,b,c) corresponds to the list [ a , b , c ]      
+##          in this setting.
+##
+##  output: 
+##      The same as the main function
+##
 InstallGlobalFunction(AsCommutatorLists, function(cycles, cycles2, cycles3)
-    # cycles := list containing cycles of odd order
-    # cycles2 := list containing pairs of cycles of even order
-    # cycles3 := list containing 3-cycles
     local a, b, phi, psi, c, l, l1, l2, m, k, aux, max;
 
     # the particular cases

@@ -16,7 +16,7 @@ DeclareGlobalFunction("ClassMatrix");
 
 ################################################################################
 ##
-##  CharTab( G, permRepr[, mode] )
+#M  CharTab( G, permRepr[, mode] )
 ##
 ##  Computes the table of irreducible characters of G using a simplified version
 ##  of the Burnside/Dixon/Schneider algorihm.
