@@ -202,7 +202,7 @@ end;
 
 ################################################################################
 ##
-##  ClassMatrix( C, g, j, r )
+##  ClassMatrix( C, g, j, r, permRepr )
 ##
 ##  Computes the class matrix M_j.
 ##
@@ -247,7 +247,7 @@ end);
 
 ################################################################################
 ##
-##  ClassMap( g, C )
+##  ClassMap( g, C, permRepr )
 ##
 ##  Computes the image of g under the class map
 ##  C is a list of all the conjugacy classes
@@ -273,7 +273,7 @@ end);
 
 ################################################################################
 ##
-##  BestMat( K, g, r, CO, C )
+##  BestMat( K, g, r, CO, C, permRepr )
 ##
 ##  Returns the value j such that computing the matrix M_j is the best option
 ##
