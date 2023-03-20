@@ -256,7 +256,7 @@ InstallGlobalFunction(ClassMap, function(g, C, permRepr)
     local c, j, possible, x; 
     if permRepr = true then
         possible := Filtered([1..Length(C)], x->CycleStructurePerm(Representative(C[x]))=CycleStructurePerm(g));
-    else # this is way we prefer permutation groups
+    else # this is why we prefer permutation groups
         possible := Filtered([1..Length(C)], x->Order(Representative(C[x]))=Order(g));
     fi;
     if Length(possible) = 1 then return possible[1]; fi;
